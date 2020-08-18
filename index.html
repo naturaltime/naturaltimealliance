@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Alliance for Natural Time Zones</title>
+
+        <!-- Script to detect browser language and load appropriate page. -->
+        <script>
+            // Get the user language from the browser.
+            let userLanguage = navigator.language.substring(0, 2) || navigator.userLanguage.substring(0, 2);
+            console.log('User language is:', userLanguage);
+
+            // If the site doesn't support the user language, default to English.
+            let siteLanguages = [
+                'da',
+                'de',
+                'en',
+                'es',
+                'fr',
+                'nl',
+                'ru',
+            ];
+            if (!siteLanguages.includes(userLanguage)) {
+                userLanguage = 'en';
+            }
+
+            // Create new path, whether local test file or online website.
+            let newPath;
+            if (location.protocol === 'file:') {
+                newPath = location.pathname.slice(0, -10).concat(userLanguage).concat('/index.html');
+            } else {
+                newPath = `/${userLanguage}/`;
+            }
+
+            // Assign the browser location to the new path.
+            console.log('Navigating to new path:', newPath);
+            location.assign(newPath);
+        </script>
+
+    </head>
+    <body>
+
+        <!-- Fallback links to pages, if JavaScript disabled. -->
+        <noscript>
+            <nav>
+                <div><a href="da/">DA 🇩🇰</a></div>
+                <div><a href="de/">DE 🇩🇪</a></div>
+                <div><a href="en/">EN 🇬🇧</a></div>
+                <div><a href="es/">ES 🇪🇸</a></div>
+                <div><a href="fr/">FR 🇫🇷</a></div>
+                <div><a href="nl/">NL 🇳🇱</a></div>
+                <div><a href="ru/">RU 🇷🇺</a></div>
+            </nav>
+        </noscript>
+
+    </body>
+</html>
