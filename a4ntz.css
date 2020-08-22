@@ -1,4 +1,18 @@
 @charset 'UTF-8';
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('fonts/poppins-semibold-webfont.woff2') format('woff2'),
+         url('fonts/poppins-semibold-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/poppins-light-webfont.woff2') format('woff2'),
+         url('fonts/poppins-light-webfont.woff') format('woff');
+}
 :root {
   --blue: #00529B;
   --green: #7AC142;
@@ -26,7 +40,8 @@ a:visited {
     transition: background-color 0.25s;
 }
 body {
-    font-family: sans-serif;
+    font-family: 'Poppins', Futura, Helvetica, sans-serif;
+    font-weight: 300;
     min-width: 320px;
     text-align: center;
 }
@@ -49,7 +64,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: bolder;
+    font-weight: 600;
 }
 header {
     position: relative;
@@ -78,10 +93,13 @@ select {
     border-width: 1px;
     color: var(--blue);
     cursor: pointer;
+    font-family: inherit;
     font-size: 1rem;
+    font-weight: 300;
     line-height: 2;
     min-height: 2rem;
     padding: 0 1rem;
+    text-align: center;
     transition: background 0.25s;
 }
 select::-ms-expand { /* Override default styling. */
@@ -159,6 +177,9 @@ small {
     }
 }
 @media all and (max-width: 1023px) {
+    .member-content {
+        font-size: 95%;
+    }
     .member-wrap {
         width: calc((100% - 3rem) / 3);
     }
@@ -168,7 +189,7 @@ small {
 }
 @media all and (max-width: 767px) {
     .member-content {
-        font-size: 95%;
+        font-size: 90%;
     }
     .member-logo {
         width: 112px;
@@ -182,7 +203,7 @@ small {
 }
 @media all and (max-width: 511px) {
     .member-content {
-        font-size: 90%;
+        font-size: 80%;
     }
     .member-logo {
         width: 96px;
