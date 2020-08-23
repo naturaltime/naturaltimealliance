@@ -53,10 +53,10 @@ main {
 footer {
     background-color: var(--blue);
     color: #fff;
-    padding: 0.5rem 0 1rem;
+    padding: 1.5rem 0 0.5rem;
 }
 footer > div > * {
-    margin: 0.5rem 0 0;
+    margin: 0 auto 0.75rem;
 }
 h1,
 h2,
@@ -119,6 +119,20 @@ small {
     right: 0.5rem;
     top: 0.5rem;
 }
+.map-wrap {
+    margin: 0 auto 1rem;
+    padding-top: 56.25%;
+    position: relative;
+}
+.map-wrap > iframe {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
 .member-content {
     line-height: 1.125;
     padding: 0.75rem;
@@ -156,6 +170,7 @@ small {
     margin: 0 auto 0.5rem;
 }
 .site-logo {
+    margin: 0 auto -0.5rem;
     max-width: 512px;
 }
 .width-limit {
