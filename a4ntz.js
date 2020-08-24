@@ -40,17 +40,17 @@
             // Create and markers to map.
             const atc = L.marker([54.2328, 10.2783], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'atc.png',
-                memberName: 'Abolish Time Change',
+                memberName: 'Zeitumstellung Abschaffen',
                 domain: 'zeitumstellung-abschaffen.de',
             }));
             const aadst = L.marker([48.8684, 2.0977], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'aadst.png',
-                memberName: 'Association Against Double Summer Time',
+                memberName: 'Association Contre l’Heure d’Été Double',
                 domain: 'heure-ete.net',
             }));
             const armh = L.marker([44.9334, 4.8924], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'armh.png',
-                memberName: 'Association for the Return to the Meridian Hour',
+                memberName: 'Association pour le Retour a l’Heure Méridienne',
                 domain: 'lameridienne.over-blog.org',
             }));
             const bs = L.marker([55.6761, 12.5683], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
@@ -70,17 +70,17 @@
             }));
             const btp = L.marker([52.1764, 5.2992], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'btp.png',
-                memberName: 'Better Times Platform',
+                memberName: 'Platform Betere Tijden',
                 domain: 'beteretijden.org',
             }));
             const gstp = L.marker([52.5200, 13.4050], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'gstp.png',
-                memberName: 'German Society for Time Policy',
+                memberName: 'Deutsche Gesellschaft für Zeitpolitik',
                 domain: 'zeitpolitik.de',
             }));
             const sht = L.marker([51.5462, 46.0154], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'sht.png',
-                memberName: 'Saratov for a Healthy Time',
+                memberName: 'Саратов за Здоровое Время',
                 domain: 'facebook.com/groups/zazdorovoevremya',
             }));
             const sst = L.marker([37.7749, -122.4194], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
@@ -90,7 +90,7 @@
             }));
             const sti = L.marker([52.3906, 13.0645], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'sti.png',
-                memberName: 'Solar Time Initiative',
+                memberName: 'Initiative Sonnenzeit',
                 domain: 'initiative-sonnenzeit.de',
             }));
 
