@@ -63,9 +63,14 @@
                 memberName: 'Barcelona Time Use Initiative',
                 domain: 'timeuse.barcelona',
             }));
-            const bt = L.marker([51.0504, 13.7373], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+            const bt1 = L.marker([51.0504, 13.7373], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'bt.png',
-                memberName: 'Better Times',
+                memberName: 'BetterTimes',
+                domain: 'gobettertimes.org',
+            }));
+            const bt2 = L.marker([40.2033, -8.4103], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'bt.png',
+                memberName: 'BetterTimes',
                 domain: 'gobettertimes.org',
             }));
             const btp = L.marker([52.1764, 5.2992], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
