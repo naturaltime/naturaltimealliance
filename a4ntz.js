@@ -83,6 +83,11 @@
                 memberName: 'Deutsche Gesellschaft für Zeitpolitik',
                 domain: 'zeitpolitik.de',
             }));
+            // const lnt = L.marker([0, 0], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+            //     imgName: 'lnt.png',
+            //     memberName: 'In Normalzeit Leben',
+            //     domain: 'normalzeit-leben.de',
+            // }));
             const sht = L.marker([51.5462, 46.0154], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'sht.png',
                 memberName: 'Саратов за Здоровое Время',
