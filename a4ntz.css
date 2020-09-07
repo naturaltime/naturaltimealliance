@@ -204,11 +204,17 @@ small {
     justify-content: center;
     margin: 0 auto 1rem;
 }
-.mission-statement {
+.prose {
     line-height: 1.5;
     margin: 0 auto 1rem;
 }
-.mission-statement > p {
+.prose > h1 {
+    font-size: 133.3333%;
+    line-height: 1.3333;
+    margin: 0 auto 0.25rem;
+}
+.prose > p {
+    line-height: 1.6667;
     margin: 0 auto 0.5rem;
 }
 .site-logo {
