@@ -48,6 +48,11 @@
                 memberName: 'Association Contre l’Heure d’Été Double',
                 domain: 'heure-ete.net',
             }));
+            const aast = L.marker([51.3582, 4.8635], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'aast.png',
+                memberName: 'Vereniging Tegen het Zomeruur',
+                domain: 'zomeruur.com',
+            }));
             const armh = L.marker([44.9334, 4.8924], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'armh.png',
                 memberName: 'Association pour le Retour a l’Heure Méridienne',
@@ -102,6 +107,11 @@
                 imgName: 'sti.png',
                 memberName: 'Initiative Sonnenzeit',
                 domain: 'initiative-sonnenzeit.de',
+            }));
+            const ta = L.marker([49.4401, 7.7491], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'ta.png',
+                memberName: 'Zeitenwende',
+                domain: 'mathe-physik-technik.de/links/zeitenwende',
             }));
 
         } catch (error) {
