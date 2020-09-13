@@ -73,7 +73,7 @@
                 memberName: 'Deutsche Gesellschaft für Zeitpolitik',
                 domain: 'zeitpolitik.de',
             }));
-            const g = L.marker([52.2995, 5.2434], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+            const g = L.marker([52.0907, 5.1214], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'g.png',
                 memberName: 'Gezondtijd!',
                 domain: 'gezondtijd.eu',
