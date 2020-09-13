@@ -75,7 +75,7 @@
             }));
             const g = L.marker([52.2995, 5.2434], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'g.png',
-                memberName: 'Gezondtijd',
+                memberName: 'Gezondtijd!',
                 domain: 'gezondtijd.eu',
             }));
             // const inl = L.marker([0, 0], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
@@ -93,9 +93,14 @@
                 memberName: 'Platform Betere Tijden',
                 domain: 'beteretijden.org',
             }));
+            const s = L.marker([51.6461, 4.6075], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 's.png',
+                memberName: 'Standaardtijd',
+                domain: 'standaardtijd.nl',
+            }));
             const sht = L.marker([51.5462, 46.0154], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'sht.png',
-                memberName: 'Саратов за Здоровое Время',
+                memberName: 'Саратов за Здоровое Время!',
                 domain: 'facebook.com/groups/zazdorovoevremya',
             }));
             const sst = L.marker([37.7749, -122.4194], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
