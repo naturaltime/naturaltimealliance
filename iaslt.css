@@ -166,7 +166,7 @@ small {
     width: 48px;
 }
 .map-wrap {
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.25rem;
     padding-bottom: 33%; /* 3:1 aspect ratio default. */
     position: relative;
 }
@@ -203,6 +203,12 @@ small {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto 1rem;
+}
+.mission {
+    max-width: 768px;
+}
+.platform {
+    max-width: 960px;
 }
 .prose {
     line-height: 1.5;
