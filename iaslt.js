@@ -83,7 +83,7 @@
                 memberName: 'Good Light Group',
                 domain: 'goodlightgroup.org',
             }));
-            const inl = L.marker([51.13, 10.02], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+            const inl = L.marker([54.3233, 10.1228], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'inl.png',
                 memberName: 'In Normalzeit Leben',
                 domain: 'normalzeit-leben.de',
