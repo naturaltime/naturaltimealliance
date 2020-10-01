@@ -78,11 +78,11 @@
                 memberName: 'Gezondtijd!',
                 domain: 'gezondtijd.eu',
             }));
-            const glg = L.marker([51.4416, 5.4697], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'glg.png',
-                memberName: 'Good Light Group',
-                domain: 'goodlightgroup.org',
-            }));
+            // const glg = L.marker([51.4416, 5.4697], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+            //     imgName: 'glg.png',
+            //     memberName: 'Good Light Group',
+            //     domain: 'goodlightgroup.org',
+            // }));
             const inl = L.marker([54.3233, 10.1228], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'inl.png',
                 memberName: 'In Normalzeit Leben',
