@@ -68,11 +68,11 @@
                 memberName: 'Barcelona Time Use Initiative',
                 domain: 'timeuse.barcelona',
             }));
-            const dgz = L.marker([52.5200, 13.4050], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'dgz.png',
-                memberName: 'Deutsche Gesellschaft für Zeitpolitik',
-                domain: 'zeitpolitik.de',
-            }));
+            // const dgz = L.marker([52.5200, 13.4050], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+            //     imgName: 'dgz.png',
+            //     memberName: 'Deutsche Gesellschaft für Zeitpolitik',
+            //     domain: 'zeitpolitik.de',
+            // }));
             const g = L.marker([52.0907, 5.1214], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'g.png',
                 memberName: 'Gezondtijd!',
