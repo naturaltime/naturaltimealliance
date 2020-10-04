@@ -1,3 +1,3 @@
-# International Alliance for Sustainable Local Time
+# International Alliance for Natural Time
 
-Very basic site, with extra comments for easier reading by non-technical eyes.
+Static, multilingual site, with a basic design, minimal styles and scripts, and extra comments for easier reading by non-technical eyes.
