@@ -40,7 +40,7 @@
             // Create and markers to map.
             const ached = L.marker([48.8684, 2.0977], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'ached.png',
-                memberName: 'Association Contre l’Heure d’Été Double',
+                memberName: 'Association Citoyenne pour une Heure Equitable & Durable',
                 domain: 'heure-ete.net',
             }));
             const armh = L.marker([44.9334, 4.8924], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
