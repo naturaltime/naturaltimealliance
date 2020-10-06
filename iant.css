@@ -114,6 +114,21 @@ select::-ms-expand { /* Override default styling. */
 small {
     font-size: 90%;
 }
+summary {
+    background-color: #fff;
+    border-color: var(--yellow);
+    border-radius: 1rem;
+    border-style: solid;
+    border-width: 1px;
+    color: var(--blue);
+    cursor: pointer;
+    display: inline-block; /* Prevent full-width extension. */
+    padding: 0.25rem 1rem;
+    transition: background-color 0.25s;
+}
+details[open] summary {
+    display: none;
+}
 .email {
     display: inline-block;
     line-height: 2;
@@ -210,6 +225,10 @@ small {
     justify-content: center;
     margin: 0 auto 1rem;
 }
+.members-all-heading {
+    font-size: 105%;
+    margin-bottom: 1rem;
+}
 .mission {
     max-width: 768px;
 }
@@ -220,12 +239,12 @@ small {
     line-height: 1.5;
     margin: 0 auto 1rem;
 }
-.prose > h1 {
+.prose h1 {
     font-size: 133.3333%;
     line-height: 1.3333;
     margin: 0 auto 0.25rem;
 }
-.prose > p {
+.prose p {
     line-height: 1.6667;
     margin: 0 auto 0.5rem;
 }
@@ -242,7 +261,9 @@ small {
     a:hover,
     a:focus,
     select:hover,
-    select:focus {
+    select:focus,
+    summary:hover,
+    summary:focus {
         background-color: var(--yellow);
     }
     .leaflet-bar a:hover {
