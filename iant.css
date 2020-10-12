@@ -227,6 +227,7 @@ details[open] summary {
 }
 .members-all-heading {
     font-size: 105%;
+    line-height: 1.5;
     margin-bottom: 1rem;
 }
 .mission {
@@ -249,7 +250,7 @@ details[open] summary {
     margin: 0 auto 0.5rem;
 }
 .site-logo {
-    margin: 0 auto -0.5rem;
+    margin: 0 auto;
     max-width: 512px;
 }
 .width-limit {
