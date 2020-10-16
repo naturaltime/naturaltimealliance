@@ -231,7 +231,7 @@ details[open] summary {
     margin-bottom: 1rem;
 }
 .mission {
-    max-width: 768px;
+    max-width: 896px;
 }
 .platform {
     max-width: 960px;
@@ -251,7 +251,7 @@ details[open] summary {
 }
 .site-logo {
     margin: 0 auto;
-    max-width: 416px;
+    max-width: 384px;
 }
 .width-limit {
     margin: auto;
@@ -283,9 +283,6 @@ details[open] summary {
     .member-wrap {
         width: calc((100% - 3rem) / 3);
     }
-    .site-logo {
-        max-width: 50%;
-    }
 }
 @media all and (max-width: 767px) {
     .member-content {
@@ -296,9 +293,6 @@ details[open] summary {
     }
     .member-wrap {
         width: calc((100% - 2rem) / 2);
-    }
-    .site-logo {
-        max-width: 75%;
     }
 }
 @media all and (max-width: 511px) {
