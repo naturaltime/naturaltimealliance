@@ -48,11 +48,6 @@
                 memberName: 'ARHOE',
                 domain: 'horariosenespana.com',
             }));
-            const armh = L.marker([44.9334, 4.8924], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'armh.png',
-                memberName: 'Association pour le Retour a l’Heure Méridienne',
-                domain: 'lameridienne.over-blog.org',
-            }));
             // const bs = L.marker([55.6761, 12.5683], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
             //     imgName: 'bs.png',
             //     memberName: 'B-Society',
@@ -98,6 +93,11 @@
             //     memberName: 'Initiative Sonnenzeit',
             //     domain: 'initiative-sonnenzeit.de',
             // }));
+            const lm = L.marker([44.9334, 4.8924], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'lm.png',
+                memberName: 'La Méridienne',
+                domain: 'lameridienne.over-blog.org',
+            }));
             const pbt = L.marker([52.1764, 5.2992], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'pbt.png',
                 memberName: 'Platform Betere Tijden',
