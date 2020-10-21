@@ -107,6 +107,7 @@
                 imgName: 's.png',
                 memberName: 'Standaardtijd',
                 domain: 'standaardtijd.nl',
+                scheme: 'http',
             }));
             // const sht = L.marker([51.5462, 46.0154], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
             //     imgName: 'sht.png',
@@ -160,7 +161,8 @@
     }
 
     function makeMapPopupString (data) {
-        return `<img alt="logo" class="map-logo" src="../images/${data.imgName}"><div><h6>${data.memberName}</h6><a class="map-anchor" href="//${data.domain}/" target="_blank" title="Visit">${data.domain}</a></div>`;
+        // Build string from data properties. Assume HTTPS unless specified otherwise.
+        return `<img alt="logo" class="map-logo" src="../images/${data.imgName}"><div><h6>${data.memberName}</h6><a class="map-anchor" href="${data.scheme || 'https'}://${data.domain}/" target="_blank" title="Visit">${data.domain}</a></div>`;
     }
 
     function initGui () {
