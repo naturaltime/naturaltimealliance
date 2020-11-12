@@ -176,8 +176,8 @@ details[open] summary {
 }
 .map-anchor {
     display: inline-block;
-    line-height: 1.5;
-    padding: 0 0.5rem;
+    line-height: 1.25;
+    padding: 0.25rem 0.5rem;
     white-space: nowrap;
 }
 .map-logo {

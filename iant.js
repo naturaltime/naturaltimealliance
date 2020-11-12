@@ -3,8 +3,8 @@
     function addMap () {
         try {
 
-            // Create map. Center on 45 N, 0 E/W. Zoom to 2.
-            const map = L.map('map').setView([45, 0], 2);
+            // Create map. Center on given latitude, longitude. Zoom to 2.
+            const map = L.map('map').setView([30, 0], 2);
 
             // Initialize map per Leaflet documentation: https://leafletjs.com/
             L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -98,6 +98,16 @@
                 memberName: 'La Méridienne',
                 domain: 'lameridienne.over-blog.org',
             }));
+            const na = L.marker([59.3293, 18.0686], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'na.png',
+                memberName: 'Normaltid Alltid',
+                domain: 'normaltidalltid.nu',
+            }));
+            const nds = L.marker([-27.4698, 153.0251], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'nds.png',
+                memberName: 'No Daylight Saving',
+                domain: 'facebook.com/No-Daylight-Saving<wbr>-591275684328063',
+            }));
             const pbt = L.marker([52.1764, 5.2992], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'pbt.png',
                 memberName: 'Platform Betere Tijden',
@@ -109,15 +119,20 @@
                 domain: 'standaardtijd.nl',
                 scheme: 'http',
             }));
-            // const sht = L.marker([51.5462, 46.0154], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-            //     imgName: 'sht.png',
-            //     memberName: 'Саратов за Здоровое Время!',
-            //     domain: 'facebook.com/groups/zazdorovoevremya',
-            // }));
+            const sht = L.marker([51.5462, 46.0154], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'sht.png',
+                memberName: 'Саратов за Здоровое Время!',
+                domain: 'facebook.com/groups/zazdorovoevremya',
+            }));
             const sst = L.marker([37.7749, -122.4194], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'sst.png',
                 memberName: 'Save Standard Time',
                 domain: 'savestandardtime.com',
+            }));
+            const vrtm = L.marker([48.7080, 44.5133], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'vrtm.png',
+                memberName: 'Поволжье: Время - московское! UTC+3',
+                domain: 'vk.com/povolgeutc3',
             }));
             const vtz = L.marker([51.3582, 4.8635], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'vtz.png',
