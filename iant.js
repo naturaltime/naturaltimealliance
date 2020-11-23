@@ -67,6 +67,7 @@
                 imgName: 'dgz.png',
                 memberName: 'Deutsche Gesellschaft für Zeitpolitik',
                 domain: 'zeitpolitik.de',
+                scheme: 'http',
             }));
             const g = L.marker([52.0907, 5.1214], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'g.png',
