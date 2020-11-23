@@ -103,6 +103,7 @@
                 imgName: 'nt365.png',
                 memberName: 'Naturaltime365.us',
                 domain: 'naturaltime365.us',
+                scheme: 'http',
             }));
             const ntk = L.marker([51.1605, 71.4704], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'ntk.png',
