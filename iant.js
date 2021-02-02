@@ -38,11 +38,6 @@
             });
 
             // Create and markers to map.
-            const ached = L.marker([48.8684, 2.0977], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'ached.png',
-                memberName: 'ACHED',
-                domain: 'ached.fr',
-            }));
             const arhoe = L.marker([40.4168, -3.7038], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'arhoe.png',
                 memberName: 'ARHOE',
@@ -98,12 +93,6 @@
                 imgName: 'nds.png',
                 memberName: 'No Daylight Saving',
                 domain: 'facebook.com/No-Daylight-Saving<wbr>-591275684328063',
-            }));
-            const nt365 = L.marker([44.9383, -93.7177], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'nt365.png',
-                memberName: 'Naturaltime365.us',
-                domain: 'naturaltime365.us',
-                scheme: 'http',
             }));
             const ntk = L.marker([51.1605, 71.4704], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'ntk.png',
