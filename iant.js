@@ -127,7 +127,7 @@
             }));
             const vtz = L.marker([51.3582, 4.8635], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'vtz.png',
-                memberName: 'Vereniging Tegen het Zomeruur',
+                memberName: 'Vereniging Tegen het Zomeruur / Association Contre l’Heure d’Été Double',
                 domain: 'zomeruur.com',
             }));
             const z = L.marker([49.4401, 7.7491], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
