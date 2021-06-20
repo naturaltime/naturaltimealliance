@@ -276,22 +276,19 @@ details[open] summary {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 auto 1rem;
+    margin: 1rem auto;
 }
 .members-all-heading {
     font-size: 105%;
     line-height: 1.5;
-    margin-bottom: 1rem;
-}
-.mission {
-    max-width: 896px;
-}
-.platform {
-    max-width: 960px;
 }
 .prose {
     line-height: 1.5;
     margin: 0 auto 1rem;
+    max-width: 928px;
+}
+.prose a {
+    padding: 0 0.5rem;
 }
 .prose h1 {
     font-size: 133.3333%;
