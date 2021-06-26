@@ -38,6 +38,16 @@
             });
 
             // Create and markers to map.
+            const bc = L.marker([52.53732, 13.40800], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'bc.png',
+                memberName: 'BodyClock',
+                domain: 'bodyclock.health',
+            }));
+            const zg = L.marker([53.6312, 13.0651], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'zg.png',
+                memberName: 'Zeitgestaltung',
+                domain: 'zeit-gestaltung.de',
+            }));
             const arhoe = L.marker([40.4168, -3.7038], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'arhoe.png',
                 memberName: 'ARHOE',
@@ -58,7 +68,7 @@
                 memberName: 'Barcelona Time Use Initiative',
                 domain: 'timeuse.barcelona',
             }));
-            const dgz = L.marker([52.5200, 13.4050], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+            const dgz = L.marker([52.52196, 13.34626], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'dgz.png',
                 memberName: 'Deutsche Gesellschaft für Zeitpolitik',
                 domain: 'zeitpolitik.de',
