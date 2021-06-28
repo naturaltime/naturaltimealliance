@@ -10,7 +10,7 @@
             L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 
                 // Attribution required per Leaflet user terms of service.
-                attribution: 'Map Data &copy; <a href="//www.openstreetmap.org/" target="_blank">OpenStreetMap</a> Contributors, ' +
+                attribution: 'Map Data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> Contributors, ' +
                     '<a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>, ' +
                     'Imagery © <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>',
 
@@ -38,6 +38,16 @@
             });
 
             // Create and markers to map.
+            const bc = L.marker([52.53732, 13.40800], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'bc.png',
+                memberName: 'BodyClock',
+                domain: 'bodyclock.health',
+            }));
+            const zg = L.marker([53.6312, 13.0651], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'zg.png',
+                memberName: 'Zeitgestaltung',
+                domain: 'zeit-gestaltung.de',
+            }));
             const arhoe = L.marker([40.4168, -3.7038], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'arhoe.png',
                 memberName: 'ARHOE',
@@ -58,7 +68,7 @@
                 memberName: 'Barcelona Time Use Initiative',
                 domain: 'timeuse.barcelona',
             }));
-            const dgz = L.marker([52.5200, 13.4050], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+            const dgz = L.marker([52.52196, 13.34626], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'dgz.png',
                 memberName: 'Deutsche Gesellschaft für Zeitpolitik',
                 domain: 'zeitpolitik.de',
@@ -83,6 +93,7 @@
                 imgName: 'lm.png',
                 memberName: 'La Méridienne',
                 domain: 'lameridienne.over-blog.org',
+                scheme: 'http',
             }));
             const na = L.marker([59.3293, 18.0686], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'na.png',
