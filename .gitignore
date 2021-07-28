@@ -7,13 +7,5 @@
 # Minified:
 *.min.*
 
-# Raw Art:
-*.afdesign
-*.afphoto
-*.ai
-*.fla
-*.indd
-*.psd
-
 # Double-Underscore-Prefixed:
 __*
