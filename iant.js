@@ -11,7 +11,7 @@
 
                 // Attribution required per Leaflet user terms of service.
                 attribution: 'Map Data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> Contributors, ' +
-                    '<a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>, ' +
+                    '<a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC&#x2011;BY&#x2011;SA</a>, ' +
                     'Imagery © <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>',
 
                 // Style (color) of map. https://docs.mapbox.com/api/maps/#mapbox-styles
