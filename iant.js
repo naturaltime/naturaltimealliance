@@ -37,7 +37,7 @@
                 popupAnchor: [0, -36],
             });
 
-            // Create and markers to map.
+            // Create and add markers to map.
             const bc = L.marker([52.53732, 13.40800], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'bc.png',
                 memberName: 'BodyClock',
@@ -73,6 +73,11 @@
                 memberName: 'Deutsche Gesellschaft für Zeitpolitik',
                 domain: 'zeitpolitik.de',
                 scheme: 'http',
+            }));
+            const eua = L.marker([50.0693, 9.2597], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'eua.png',
+                memberName: 'Europa-Union Aschaffenburg',
+                domain: 'eu-aschaffenburg.de',
             }));
             const g = L.marker([52.0907, 5.1214], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'g.png',
