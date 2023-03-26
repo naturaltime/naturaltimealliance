@@ -146,6 +146,11 @@
                 memberName: 'Vereniging Tegen het Zomeruur / Association Belge pour Une Heure Naturelle Stable',
                 domain: 'zomeruur.com',
             }));
+            const vv = L.marker([51.1653, 4.1387], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'vv.png',
+                memberName: 'Vogelbescherming Vlaanderen',
+                domain: 'vogelbescherming.be',
+            }));
             const z = L.marker([49.4401, 7.7491], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'z.png',
                 memberName: 'Zeitenwende',
