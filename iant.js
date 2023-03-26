@@ -7,20 +7,12 @@
             const map = L.map('map').setView([30, 0], 2);
 
             // Initialize map per Leaflet documentation: https://leafletjs.com/
-            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-
-                // Attribution required per Leaflet user terms of service.
-                attribution: 'Map Data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> Contributors, ' +
-                    '<a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC&#x2011;BY&#x2011;SA</a>, ' +
-                    'Imagery © <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>',
-
-                // Style (color) of map. https://docs.mapbox.com/api/maps/#mapbox-styles
-                id: 'mapbox/streets-v11',
-
-                maxZoom: 10,
+            // Attribution is required per Leaflet user terms of service.
+            // Max and min zoom are our per our preference.
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                maxZoom: 8,
                 minZoom: 1,
-                tileSize: 512,
-                zoomOffset: -1,
             }).addTo(map);
 
             // Prevent dragging map too far in any direction.
