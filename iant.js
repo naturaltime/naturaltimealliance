@@ -118,7 +118,7 @@
                 memberName: 'Саратов за Здоровое Время!',
                 domain: 'facebook.com/groups/zazdorovoevremya',
             }));
-            const sst = L.marker([37.7749, -122.4194], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+            const sst = L.marker([33.6042, -111.7257], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'sst.png',
                 memberName: 'Save Standard Time',
                 domain: 'savestandardtime.com',
