@@ -71,11 +71,6 @@
                 memberName: 'Europa-Union Aschaffenburg',
                 domain: 'eu-aschaffenburg.de',
             }));
-            const g = L.marker([52.0907, 5.1214], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'g.png',
-                memberName: 'Gezondtijd!',
-                domain: 'gezondtijd.eu',
-            }));
             const glg = L.marker([51.4416, 5.4697], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'glg.png',
                 memberName: 'Good Light Group',
