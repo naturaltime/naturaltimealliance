@@ -34,8 +34,7 @@
                 imgName: 'bc.png',
                 memberName: 'BodyClock',
                 domain: 'bodyclock.health',
-            }));
-            const zg = L.marker([53.6312, 13.0651], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+            }));const zg = L.marker([53.6312, 13.0651], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'zg.png',
                 memberName: 'Zeitgestaltung',
                 domain: 'zeit-gestaltung.de',
@@ -86,6 +85,11 @@
                 memberName: 'La Méridienne',
                 domain: 'lameridienne.over-blog.org',
                 scheme: 'http',
+            }));
+            const lms = L.marker([55.6761, 12.5683], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'lms.png',
+                memberName: 'Landsforeningen Mod Sommertid',
+                domain: 'www.ikkesommertid.dk',
             }));
             const na = L.marker([59.3293, 18.0686], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'na.png',
