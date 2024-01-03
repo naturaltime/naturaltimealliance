@@ -34,10 +34,6 @@
                 imgName: 'bc.png',
                 memberName: 'BodyClock',
                 domain: 'bodyclock.health',
-            }));const zg = L.marker([53.6312, 13.0651], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'zg.png',
-                memberName: 'Zeitgestaltung',
-                domain: 'zeit-gestaltung.de',
             }));
             const arhoe = L.marker([40.4168, -3.7038], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'arhoe.png',
@@ -56,7 +52,7 @@
             }));
             const btui = L.marker([41.3851, 2.1734], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'btui.png',
-                memberName: 'Barcelona Time Use Initiative',
+                memberName: 'Time Use Initiative',
                 domain: 'timeuse.barcelona',
             }));
             const dgz = L.marker([52.52196, 13.34626], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
@@ -117,6 +113,11 @@
                 domain: 'standaardtijd.nl',
                 scheme: 'http',
             }));
+            const sc = L.marker([38.9897, -76.9378], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'sc.png',
+                memberName: 'Solar Clock',
+                domain: 'play.google.com/store/apps/details<wbr>?id=com.jamescr05.solar_clock',
+            }));
             const sht = L.marker([51.5462, 46.0154], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'sht.png',
                 memberName: 'Саратов за Здоровое Время!',
@@ -147,6 +148,11 @@
                 memberName: 'Zeitenwende',
                 domain: 'mathe-physik-technik.de/links/zeitenwende',
             }));
+            const zg = L.marker([53.6312, 13.0651], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'zg.png',
+                memberName: 'Zeitgestaltung',
+                domain: 'zeit-gestaltung.de',
+            }));
 
         } catch (error) {
             // If 3rd-party map fails to load, report error and remove map element from view.
@@ -175,7 +181,7 @@
 
     function makeMapPopupString (data) {
         // Build string from data properties. Assume HTTPS unless specified otherwise.
-        return `<img alt="logo" class="map-logo" src="../images/${data.imgName}"><div><h6>${data.memberName}</h6><a class="map-anchor" href="${data.scheme || 'https'}://${data.domain}/" target="_blank" title="Visit">${data.domain}</a></div>`;
+        return `<img alt="logo" class="map-logo" src="../images/${data.imgName}"><div><h6>${data.memberName}</h6><a class="map-anchor" href="${data.scheme || 'https'}://${data.domain.replaceAll('<wbr>', '')}" target="_blank" title="Visit">${data.domain}</a></div>`;
     }
 
     function initGui () {
