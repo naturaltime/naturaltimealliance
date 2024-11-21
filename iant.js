@@ -55,6 +55,11 @@
                 memberName: 'Time Use Initiative',
                 domain: 'timeuse.barcelona',
             }));
+            const csrc = L.marker([45.4201, -75.7003], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'group-csrc.png',
+                memberName: 'Canadian Sleep Research Consortium',
+                domain: 'www.researchsleep.ca',
+            }));
             const dgz = L.marker([52.52196, 13.34626], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-dgz.png',
                 memberName: 'Deutsche Gesellschaft für Zeitpolitik',
