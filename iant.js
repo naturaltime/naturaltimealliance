@@ -31,125 +31,130 @@
 
             // Create and add markers to map.
             const bc = L.marker([52.53732, 13.40800], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'bc.png',
+                imgName: 'group-bc.png',
                 memberName: 'BodyClock',
                 domain: 'bodyclock.health',
             }));
             const arhoe = L.marker([40.4168, -3.7038], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'arhoe.png',
+                imgName: 'group-arhoe.png',
                 memberName: 'ARHOE',
                 domain: 'horariosenespana.com',
             }));
             const bt1 = L.marker([51.0504, 13.7373], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'bt.png',
+                imgName: 'group-bt.png',
                 memberName: 'BetterTimes',
                 domain: 'gobettertimes.org',
             }));
             const bt2 = L.marker([40.2033, -8.4103], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'bt.png',
+                imgName: 'group-bt.png',
                 memberName: 'BetterTimes',
                 domain: 'gobettertimes.org',
             }));
             const btui = L.marker([41.3851, 2.1734], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'btui.png',
+                imgName: 'group-btui.png',
                 memberName: 'Time Use Initiative',
                 domain: 'timeuse.barcelona',
             }));
             const dgz = L.marker([52.52196, 13.34626], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'dgz.png',
+                imgName: 'group-dgz.png',
                 memberName: 'Deutsche Gesellschaft für Zeitpolitik',
                 domain: 'zeitpolitik.de',
                 scheme: 'http',
             }));
             const eua = L.marker([50.0693, 9.2597], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'eua.png',
+                imgName: 'group-eua.png',
                 memberName: 'Europa-Union Aschaffenburg',
                 domain: 'eu-aschaffenburg.de',
             }));
             const glg = L.marker([51.4416, 5.4697], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'glg.png',
+                imgName: 'group-glg.png',
                 memberName: 'Good Light Group',
                 domain: 'goodlightgroup.org',
             }));
             const inl = L.marker([54.3233, 10.1228], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'inl.png',
+                imgName: 'group-inl.png',
                 memberName: 'In Normalzeit Leben',
                 domain: 'normalzeit-leben.de',
             }));
             const lm = L.marker([44.9334, 4.8924], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'lm.png',
+                imgName: 'group-lm.png',
                 memberName: 'La Méridienne',
                 domain: 'lameridienne.over-blog.org',
                 scheme: 'http',
             }));
             const lms = L.marker([55.6761, 12.5683], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'lms.png',
+                imgName: 'group-lms.png',
                 memberName: 'Landsforeningen Mod Sommertid',
                 domain: 'www.ikkesommertid.dk',
             }));
             const na = L.marker([59.3293, 18.0686], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'na.png',
+                imgName: 'group-na.png',
                 memberName: 'Normaltid Alltid',
                 domain: 'normaltidalltid.nu',
             }));
             const nds = L.marker([-27.4698, 153.0251], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'nds.png',
+                imgName: 'group-nds.png',
                 memberName: 'No Daylight Saving',
                 domain: 'facebook.com/No-Daylight-Saving<wbr>-591275684328063',
             }));
+            const nnht = L.marker([59.6864, 10.7930], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'group-nnht.png',
+                memberName: 'Normaltid i Norge Hele Tiden',
+                domain: 'facebook.com/groups/1657099824847086',
+            }));
             const ntk = L.marker([51.1605, 71.4704], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'ntk.png',
+                imgName: 'group-ntk.png',
                 memberName: 'Казахстану природное время!',
                 domain: 'facebook.com/groups/949363842090236',
             }));
             const pbt = L.marker([52.1764, 5.2992], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'pbt.png',
+                imgName: 'group-pbt.png',
                 memberName: 'Platform Betere Tijden',
                 domain: 'beteretijden.org',
             }));
             const s = L.marker([51.6461, 4.6075], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 's.png',
+                imgName: 'group-s.png',
                 memberName: 'Standaardtijd',
                 domain: 'standaardtijd.nl',
                 scheme: 'http',
             }));
             const sc = L.marker([38.9897, -76.9378], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'sc.png',
+                imgName: 'group-sc.png',
                 memberName: 'Solar Clock',
                 domain: 'play.google.com/store/apps/details<wbr>?id=com.jamescr05.solar_clock',
             }));
             const sht = L.marker([51.5462, 46.0154], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'sht.png',
+                imgName: 'group-sht.png',
                 memberName: 'Саратов за Здоровое Время!',
                 domain: 'facebook.com/groups/zazdorovoevremya',
             }));
             const sst = L.marker([33.6042, -111.7257], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'sst.png',
+                imgName: 'group-sst.png',
                 memberName: 'Save Standard Time',
                 domain: 'savestandardtime.com',
             }));
             const vrtm = L.marker([48.7080, 44.5133], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'vrtm.png',
+                imgName: 'group-vrtm.png',
                 memberName: 'Поволжье: Время - московское! UTC+3',
                 domain: 'vk.com/povolgeutc3',
             }));
             const vtz = L.marker([51.3582, 4.8635], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'vtz.png',
+                imgName: 'group-vtz.png',
                 memberName: 'Vereniging Tegen het Zomeruur / Association Belge pour Une Heure Naturelle Stable',
                 domain: 'zomeruur.com',
             }));
             const vv = L.marker([51.1653, 4.1387], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'vv.png',
+                imgName: 'group-vv.png',
                 memberName: 'Vogelbescherming Vlaanderen',
                 domain: 'vogelbescherming.be',
             }));
             const z = L.marker([49.4401, 7.7491], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'z.png',
+                imgName: 'group-z.png',
                 memberName: 'Zeitenwende',
                 domain: 'mathe-physik-technik.de/links/zeitenwende',
             }));
             const zg = L.marker([53.6312, 13.0651], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                imgName: 'zg.png',
+                imgName: 'group-zg.png',
                 memberName: 'Zeitgestaltung',
                 domain: 'zeit-gestaltung.de',
             }));
