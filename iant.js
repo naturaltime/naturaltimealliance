@@ -87,6 +87,11 @@
                 memberName: 'Landsforeningen Mod Sommertid',
                 domain: 'www.ikkesommertid.dk',
             }));
+            const mas = L.marker([47.4979, 19.0402], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'group-mas.png',
+                memberName: 'Magyar Alvás Szövetség',
+                domain: 'napialvas.hu',
+            }));
             const na = L.marker([59.3293, 18.0686], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-na.png',
                 memberName: 'Normaltid Alltid',
@@ -95,17 +100,17 @@
             const nds = L.marker([-27.4698, 153.0251], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-nds.png',
                 memberName: 'No Daylight Saving',
-                domain: 'facebook.com/No-Daylight-Saving<wbr>-591275684328063',
+                domain: 'www.facebook.com/No-Daylight-Saving<wbr>-591275684328063',
             }));
             const nnht = L.marker([59.6864, 10.7930], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-nnht.png',
                 memberName: 'Normaltid i Norge Hele Tiden',
-                domain: 'facebook.com/groups/1657099824847086',
+                domain: 'www.facebook.com/groups/1657099824847086',
             }));
             const ntk = L.marker([51.1605, 71.4704], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-ntk.png',
                 memberName: 'Казахстану природное время!',
-                domain: 'facebook.com/groups/949363842090236',
+                domain: 'www.facebook.com/groups/949363842090236',
             }));
             const pbt = L.marker([52.1764, 5.2992], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-pbt.png',
@@ -126,7 +131,7 @@
             const sht = L.marker([51.5462, 46.0154], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-sht.png',
                 memberName: 'Саратов за Здоровое Время!',
-                domain: 'facebook.com/groups/zazdorovoevremya',
+                domain: 'www.facebook.com/groups/zazdorovoevremya',
             }));
             const sst = L.marker([33.6042, -111.7257], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-sst.png',
