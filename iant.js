@@ -100,7 +100,7 @@
             const na = L.marker([59.3293, 18.0686], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-na.png',
                 memberName: 'Normaltid Alltid',
-                domain: 'normaltidalltid.nu',
+                domain: 'www.normaltidalltid.se',
             }));
             const nds = L.marker([-27.4698, 153.0251], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-nds.png',
