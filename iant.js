@@ -35,6 +35,11 @@
                 memberName: 'BodyClock',
                 domain: 'bodyclock.health',
             }));
+            const bcc = L.marker([52.1636, 4.4802], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'group-bcc.png',
+                memberName: 'BioClock Consortium',
+                domain: 'bioclockconsortium.org',
+            }));
             const arhoe = L.marker([40.4168, -3.7038], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-arhoe.png',
                 memberName: 'ARHOE',
