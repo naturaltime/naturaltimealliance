@@ -63,7 +63,7 @@
             const csrc = L.marker([45.4201, -75.7003], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-csrc.png',
                 memberName: 'Canadian Sleep Research Consortium',
-                domain: 'www.researchsleep.ca',
+                domain: 'researchsleep.ca',
             }));
             const dgz = L.marker([52.52196, 13.34626], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-dgz.png',
@@ -95,7 +95,8 @@
             const lms = L.marker([55.6761, 12.5683], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-lms.png',
                 memberName: 'Landsforeningen Mod Sommertid',
-                domain: 'www.ikkesommertid.dk',
+                domain: 'ikkesommertid.dk',
+                subdomain: 'www',
             }));
             const mas = L.marker([47.4979, 19.0402], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-mas.png',
@@ -105,22 +106,26 @@
             const na = L.marker([59.3293, 18.0686], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-na.png',
                 memberName: 'Normaltid Alltid',
-                domain: 'www.normaltidalltid.se',
+                domain: 'normaltidalltid.se',
+                subdomain: 'www',
             }));
             const nds = L.marker([-27.4698, 153.0251], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-nds.png',
                 memberName: 'No Daylight Saving',
-                domain: 'www.facebook.com/No-Daylight-Saving<wbr>-591275684328063',
+                domain: 'facebook.com<wbr>/<wbr>No-Daylight-Saving<wbr>-<wbr>591275684328063',
+                subdomain: 'www',
             }));
             const nnht = L.marker([59.6864, 10.7930], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-nnht.png',
                 memberName: 'Normaltid i Norge Hele Tiden',
-                domain: 'www.facebook.com/groups/1657099824847086',
+                domain: 'facebook.com<wbr>/<wbr>groups<wbr>/<wbr>1657099824847086',
+                subdomain: 'www',
             }));
             const ntk = L.marker([51.1605, 71.4704], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-ntk.png',
                 memberName: 'Казахстану природное время!',
-                domain: 'www.facebook.com/groups/949363842090236',
+                domain: 'facebook.com<wbr>/<wbr>groups<wbr>/<wbr>949363842090236',
+                subdomain: 'www',
             }));
             const pbt = L.marker([52.1764, 5.2992], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-pbt.png',
@@ -136,12 +141,13 @@
             const sc = L.marker([38.9897, -76.9378], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-sc.png',
                 memberName: 'Solar Clock',
-                domain: 'play.google.com/store/apps/details<wbr>?id=com.jamescr05.solar_clock',
+                domain: 'play.google.com/store/apps/details<wbr>?id=<wbr>com.jamescr05.solar_clock',
             }));
             const sht = L.marker([51.5462, 46.0154], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-sht.png',
                 memberName: 'Саратов за Здоровое Время!',
-                domain: 'www.facebook.com/groups/zazdorovoevremya',
+                domain: 'facebook.com<wbr>/<wbr>groups<wbr>/<wbr>zazdorovoevremya',
+                subdomain: 'www',
             }));
             const sst = L.marker([33.6042, -111.7257], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-sst.png',
@@ -151,7 +157,8 @@
             const st = L.marker([51.5581, -1.7798], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-st.png',
                 memberName: 'Solar Time',
-                domain: 'www.facebook.com/solartimeofficial',
+                domain: 'facebook.com<wbr>/<wbr>solartimeofficial',
+                subdomain: 'www',
             }));
             const vrtm = L.marker([48.7080, 44.5133], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-vrtm.png',
@@ -171,7 +178,7 @@
             const z = L.marker([49.4401, 7.7491], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-z.png',
                 memberName: 'Zeitenwende',
-                domain: 'mathe-physik-technik.de/links/zeitenwende',
+                domain: 'mathe-physik-technik.de<wbr>/<wbr>links<wbr>/<wbr>zeitenwende',
             }));
             const zg = L.marker([53.6312, 13.0651], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-zg.png',
@@ -205,8 +212,14 @@
     }
 
     function makeMapPopupString (data) {
-        // Build string from data properties. Assume HTTPS unless specified otherwise.
-        return `<img alt="logo" class="map-logo" src="../images/${data.imgName}"><div><h6>${data.memberName}</h6><a class="map-anchor" href="${data.scheme || 'https'}://${data.domain.replaceAll('<wbr>', '')}" target="_blank" title="Visit">${data.domain}</a></div>`;
+        // Build string from data properties. Assume HTTPS scheme unless specified otherwise.
+        return `
+            <img alt="logo" class="map-logo" src="../images/${data.imgName}">
+            <div>
+                <h6>${data.memberName}</h6>
+                <a class="map-anchor" href="${data.scheme || 'https'}://${data.subdomain ? data.subdomain.concat('.') : ''}${data.domain.replaceAll('<wbr>', '')}" target="_blank" title="Visit">${data.domain}</a>
+            </div>
+        `;
     }
 
     function initGui () {
