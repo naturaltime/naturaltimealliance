@@ -364,6 +364,9 @@ details[open] summary {
         font-size: 95%;
         padding-top: 0.5rem;
     }
+    .chair-country {
+        font-size: 92.5%;
+    }
     .chair-wrap {
         width: calc((100% - 0.5rem * 2 * (3 - 1)) / 3);
     }
@@ -389,6 +392,9 @@ details[open] summary {
     }
 }
 @media all and (max-width: 511px) {
+    .chair-country {
+        font-size: 95%;
+    }
     .chair-wrap {
         width: calc((100% - 0.5rem * 2 * (2 - 1)) / 2);
     }
@@ -416,6 +422,9 @@ details[open] summary {
 @media all and (max-width: 369px) {
     .chair-content {
         font-size: 90%;
+    }
+    .chair-country {
+        font-size: 85%;
     }
     .chair-photo {
         width: 100%;
