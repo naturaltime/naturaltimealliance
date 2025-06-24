@@ -148,6 +148,11 @@
                 memberName: 'Save Standard Time',
                 domain: 'savestandardtime.com',
             }));
+            const st = L.marker([51.5581, -1.7798], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
+                imgName: 'group-st.png',
+                memberName: 'Solar Time',
+                domain: 'www.facebook.com/solartimeofficial',
+            }));
             const vrtm = L.marker([48.7080, 44.5133], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-vrtm.png',
                 memberName: 'Поволжье: Время - московское! UTC+3',
