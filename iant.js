@@ -111,8 +111,8 @@
             }));
             const nds = L.marker([-27.4698, 153.0251], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 imgName: 'group-nds.png',
-                memberName: 'No Daylight Saving',
-                domain: 'facebook.com<wbr>/<wbr>No-Daylight-Saving<wbr>-<wbr>591275684328063',
+                memberName: 'No Daylight Saving Australia & New&nbsp;Zealand',
+                domain: 'facebook.com<wbr>/<wbr>profile.php<wbr>?id=100064450731610',
                 subdomain: 'www',
             }));
             const nnht = L.marker([59.6864, 10.7930], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
