@@ -39,11 +39,23 @@ a:visited {
     text-decoration: none;
     transition: background-color 0.25s;
 }
+blockquote a {
+    white-space: nowrap;
+}
+blockquote {
+    margin: 0 auto 1rem;
+}
 body {
     font-family: 'Poppins', Futura, Helvetica, sans-serif;
     font-weight: 300;
     min-width: 320px;
     text-align: center;
+}
+blockquote + details {
+    margin: -0.75rem auto 1.5rem;
+}
+blockquote + details[open] {
+    margin: 0;
 }
 footer,
 header,
