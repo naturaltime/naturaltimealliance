@@ -241,7 +241,7 @@ details[open] > *:last-child {
     display: flex;
     justify-content: center;
     margin: 0.125rem;
-    padding: 0.625rem 0.375rem 0.75rem;
+    padding: 0.75rem 0.375rem;
     width: calc((100% - 0.125rem * 2 * 6) / 6);
 }
 .grid figcaption {
@@ -250,13 +250,15 @@ details[open] > *:last-child {
 .grid figcaption > * {
     margin: 0 auto 0.3333rem;
 }
+.grid figcaption > *:last-child {
+    margin-bottom: 0;
+}
 .grid figure {
     max-width: 100%;
 }
 .grid h3 {
     align-items: center;
     display: flex;
-    font-size: 0.9rem;
     justify-content: center;
     margin: auto;
     text-transform: uppercase;
@@ -413,10 +415,12 @@ details[open] > *:last-child {
     .grid {
         padding: 0 0.125rem;
     }
+    .grid > * {
+        font-size: 90%;
+    }
 }
 @media all and (max-width: 1066px) { /* 1280 ÷ 6 x 5 */
     .grid > * {
-        font-size: 95%;
         width: calc((100% - 0.125rem * 2 * 5) / 5);
     }
     .site-logo {
@@ -425,7 +429,6 @@ details[open] > *:last-child {
 }
 @media all and (max-width: 853px) { /* 1280 ÷ 6 x 4 */
     .grid > * {
-        font-size: 90%;
         width: calc((100% - 0.125rem * 2 * 4) / 4);
     }
     .site-logo {
@@ -434,7 +437,7 @@ details[open] > *:last-child {
 }
 @media all and (max-width: 640px) { /* 1280 ÷ 6 x 3 */
     .grid > * {
-        font-size: 85%;
+        font-size: 80%;
         width: calc((100% - 0.125rem * 2 * 3) / 3);
     }
     .petition-wrap-inner {
@@ -447,7 +450,6 @@ details[open] > *:last-child {
 }
 @media all and (max-width: 426px) { /* 1280 ÷ 6 x 2 */
     .grid > * {
-        font-size: 80%;
         width: calc((100% - 0.125rem * 2 * 2) / 2);
     }
     .petition-wrap-inner {
