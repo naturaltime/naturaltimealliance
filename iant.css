@@ -39,6 +39,11 @@ a:visited:not(.button) {
     font-weight: 600;
     transition: background-color 0.25s;
 }
+a:active,
+select:active,
+summary:active {
+    background-color: var(--yellow) !important;
+}
 body {
     font-family: 'Poppins', Helvetica, sans-serif;
     font-weight: 300;
@@ -197,7 +202,7 @@ summary::after {
     font-size: 1.25rem;
     height: 1.5rem;
     line-height: 1;
-    padding: 0 0.5rem 0.125rem;
+    padding: 0 0.5rem;
     vertical-align: middle;
 }
 summary::after { /* Create the button that closes the details element. */
@@ -238,6 +243,7 @@ details[open] > *:last-child {
 .grid {
     display: flex;
     flex-wrap: wrap;
+    font-size: 90%;
     justify-content: center;
     margin: 0 auto 1.25rem;
 }
@@ -263,7 +269,6 @@ details[open] > *:last-child {
     max-width: 100%;
 }
 .grid h3 {
-    align-items: center;
     display: flex;
     justify-content: center;
     margin: auto;
@@ -396,15 +401,21 @@ details[open] > *:last-child {
 @media (hover: hover) { /* For desktop only. */
     a:hover,
     a:focus,
+    a:not(.button):hover,
+    a:not(.button):focus,
     select:hover,
     select:focus,
     summary:hover,
     summary:focus,
     summary:hover::after,
-    summary:focus::after,
+    summary:focus::after {
+        background-color: var(--yellow);
+    }
     .leaflet-bar a:hover,
-    .leaflet-bar a:focus {
-        background-color: var(--yellow) !important;
+    .leaflet-bar a:focus,
+    .leaflet-bar a:not(.button):hover,
+    .leaflet-bar a:not(.button):focus {
+        background-color: var(--yellow) !important; /* Override plugin CSS. */
     }
     footer a:not(.button):hover,
     footer a:not(.button):focus {
@@ -424,12 +435,13 @@ details[open] > *:last-child {
         padding: 0 0.125rem;
     }
     .grid > * {
-        font-size: 85%;
     }
 }
 @media all and (max-width: 1066px) { /* 1280 ÷ 6 x 5 */
+    .grid {
+        font-size: 85%;
+    }
     .grid > * {
-        font-size: 80%;
         width: calc((100% - 0.125rem * 2 * 5) / 5);
     }
     .site-logo {
@@ -438,7 +450,6 @@ details[open] > *:last-child {
 }
 @media all and (max-width: 853px) { /* 1280 ÷ 6 x 4 */
     .grid > * {
-        font-size: 75%;
         width: calc((100% - 0.125rem * 2 * 4) / 4);
     }
     .site-logo {
@@ -446,8 +457,10 @@ details[open] > *:last-child {
     }
 }
 @media all and (max-width: 640px) { /* 1280 ÷ 6 x 3 */
+    .grid {
+        font-size: 75%;
+    }
     .grid > * {
-        font-size: 65%;
         width: calc((100% - 0.125rem * 2 * 3) / 3);
     }
     .petition-wrap-inner {
