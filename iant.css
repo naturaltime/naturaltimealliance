@@ -18,7 +18,7 @@
   --blue: #00529B;
   --gray: #ccc;
   --green: #7AC142;
-  --interactive-border: 3px;
+  --interactive-border: 4px;
   --white: #fff;
   --yellow: #FDBB2F;
 }
@@ -54,6 +54,7 @@ details::after {
     bottom: 0.7rem;
     content: '';
     display: inline-block;
+    height: 8px;
     left: 0;
     margin: auto;
     max-width: 928px;
@@ -61,6 +62,10 @@ details::after {
     right: 0;
     width: 25%;
     z-index: -1;
+}
+details[open]::after {
+    border-left: 1px solid var(--blue);
+    border-right: 1px solid var(--blue);
 }
 section p + details:not([open]) {
     margin-top: -0.5rem;
@@ -189,10 +194,11 @@ small {
 }
 summary,
 summary::after {
-    font-size: 1rem;
+    font-size: 1.25rem;
     height: 1.5rem;
-    line-height: 1.5;
-    padding: 0 0.5rem;
+    line-height: 1;
+    padding: 0 0.5rem 0.125rem;
+    vertical-align: middle;
 }
 summary::after { /* Create the button that closes the details element. */
     bottom: 0;
@@ -226,7 +232,7 @@ details[open] > *:last-child {
     padding-right: 1em;
 }
 .button.external {
-    background-position: top 0.85em right 0.3em;
+    background-position: top 50% right 0.3em;
     padding-right: 1.4rem;
 }
 .grid {
@@ -264,7 +270,6 @@ details[open] > *:last-child {
     text-transform: uppercase;
 }
 .grid img {
-    border-radius: 50%;
     margin: 0.25rem auto -0.125rem;
     max-width: 50%;
     width: 100%;
@@ -351,6 +356,9 @@ details[open] > *:last-child {
     padding-top: 33%; /* 3:1 aspect ratio default. */
     position: relative;
 }
+.person {
+    border-radius: 50%;
+}
 .petition-wrap-inner {
     height: 0;
     margin: 0.125rem auto;
@@ -416,11 +424,12 @@ details[open] > *:last-child {
         padding: 0 0.125rem;
     }
     .grid > * {
-        font-size: 90%;
+        font-size: 85%;
     }
 }
 @media all and (max-width: 1066px) { /* 1280 ÷ 6 x 5 */
     .grid > * {
+        font-size: 80%;
         width: calc((100% - 0.125rem * 2 * 5) / 5);
     }
     .site-logo {
@@ -429,6 +438,7 @@ details[open] > *:last-child {
 }
 @media all and (max-width: 853px) { /* 1280 ÷ 6 x 4 */
     .grid > * {
+        font-size: 75%;
         width: calc((100% - 0.125rem * 2 * 4) / 4);
     }
     .site-logo {
@@ -437,7 +447,7 @@ details[open] > *:last-child {
 }
 @media all and (max-width: 640px) { /* 1280 ÷ 6 x 3 */
     .grid > * {
-        font-size: 80%;
+        font-size: 65%;
         width: calc((100% - 0.125rem * 2 * 3) / 3);
     }
     .petition-wrap-inner {

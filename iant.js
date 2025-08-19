@@ -127,7 +127,7 @@
             const nds = L.marker([-27.4698, 153.0251], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
                 flag: '🇦🇺 🇳🇿',
                 imgName: 'group-nds.png',
-                memberName: 'No Daylight Saving<br>Australia &&nbsp;New&nbsp;Zealand',
+                memberName: 'No Daylight Saving<br>Australia & New&nbsp;Zealand',
                 domain: 'facebook.com/profile.php?id=100064450731610',
                 subdomain: 'www',
             }));
@@ -243,7 +243,7 @@
     function makeMapPopupString (data) {
         // Build string from data properties. Assume HTTPS scheme unless specified otherwise.
         return `
-            <img alt="logo" class="map-logo" src="../images/${data.imgName}">
+            <img alt="logo" class="map-logo" loading="lazy" src="../images/${data.imgName}">
             <div>
                 <div class="map-flag">${data.flag}</div>
                 <div><a
