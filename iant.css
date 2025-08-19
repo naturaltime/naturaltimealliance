@@ -189,14 +189,14 @@ small {
 }
 summary,
 summary::after {
-    font-size: 0.7rem;
+    font-size: 1rem;
     height: 1.5rem;
-    line-height: 2;
+    line-height: 1.5;
     padding: 0 0.5rem;
 }
 summary::after { /* Create the button that closes the details element. */
     bottom: 0;
-    content: '\2212\0020\25b2\0020\2212';
+    content: '–';
     display: block;
     left: 0;
     margin-inline: auto;
@@ -217,6 +217,17 @@ summary + * {
 }
 details[open] > *:last-child {
     padding-bottom: 1.75rem; /* Create a gap for the button that closes the details element. */
+}
+.external {
+    background-image: url('images/link-external.svg');
+    background-position: top 0.25em right 0;
+    background-repeat: no-repeat;
+    background-size: 0.85em;
+    padding-right: 1em;
+}
+.button.external {
+    background-position: top 0.85em right 0.3em;
+    padding-right: 1.4rem;
 }
 .grid {
     display: flex;
@@ -334,7 +345,7 @@ details[open] > *:last-child {
     width: 48px;
 }
 .map-wrap {
-    margin: 0 0.25rem 0.125rem;
+    margin: 0.25rem 0.25rem 0.125rem;
     padding-top: 33%; /* 3:1 aspect ratio default. */
     position: relative;
 }

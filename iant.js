@@ -247,7 +247,7 @@
             <div>
                 <div class="map-flag">${data.flag}</div>
                 <div><a
-                    class="map-anchor"
+                    class="map-anchor external"
                     href="${data.scheme || 'https'}://${data.subdomain ? data.subdomain.concat('.') : ''}${data.domain.replaceAll('', '')}"
                     target="_blank"
                     title="Visit"
@@ -257,14 +257,16 @@
     }
 
     function initGui () {
-        // Get a DOM reference to language GUI.
-        let languageGui = document.getElementById('language-gui');
-
         // Add event listener to language GUI.
-        languageGui.addEventListener('change', handleLanguageChange);
+        document.getElementById('language-gui').addEventListener('change', handleLanguageChange);
 
         // Add map of member orgs.
         addMap();
+
+        // Add event listener to ensure "Contacts" details element is open.
+        document.getElementById('link-to-contacts').addEventListener('click', () => {
+            document.getElementById('contacts-details').setAttribute('open', '');
+        });
 
         // Add `target="_blank"` to Leaflet's required anchors.
         document.getElementsByClassName('leaflet-control-attribution')[0].querySelectorAll('a').forEach(a => a.setAttribute('target', '_blank'));
