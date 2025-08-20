@@ -257,10 +257,10 @@ details[open] > *:last-child {
     width: calc((100% - 0.125rem * 2 * 6) / 6);
 }
 .grid figcaption {
-    line-height: 1.125;
+    line-height: 1.35;
 }
 .grid figcaption > * {
-    margin: 0 auto 0.3333rem;
+    margin: 0 auto 0.15rem;
 }
 .grid figcaption > *:last-child {
     margin-bottom: 0;
