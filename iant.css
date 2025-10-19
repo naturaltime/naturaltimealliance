@@ -44,6 +44,14 @@ select:active,
 summary:active {
     background-color: var(--yellow) !important;
 }
+a[href^='mailto'],
+.soc > a {
+    -ms-hyphens: none;
+    -moz-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
+    word-break: break-all;
+}
 body {
     font-family: 'Poppins', Helvetica, sans-serif;
     font-weight: 300;
@@ -101,7 +109,7 @@ footer p {
     line-height: 1;
 }
 footer > div > * {
-    margin: 0 auto 0.75rem;
+    margin: 0 auto 0.5rem;
 }
 h2,
 h3,
@@ -358,7 +366,7 @@ details[open] > *:last-child {
 }
 .map-wrap {
     margin: 0.25rem 0.25rem 0.125rem;
-    padding-top: 33%; /* 3:1 aspect ratio default. */
+    padding-bottom: 33%; /* 3:1 aspect ratio default. */
     position: relative;
 }
 .person {
@@ -367,7 +375,7 @@ details[open] > *:last-child {
 .petition-wrap-inner {
     height: 0;
     margin: 0.125rem auto;
-    padding-top: 176.25%;
+    padding-bottom: 176.25%;
     position: relative;
     width: 100%;
 }
@@ -390,6 +398,33 @@ details[open] > *:last-child {
 .site-logo {
     margin: 0 auto;
     max-width: 320px;
+}
+.soc {
+    background-position: 0.25rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1.5rem;
+    display: inline-block;
+    line-height: 1;
+    margin: 0 auto 0.25rem;
+    padding: 0.45rem 0.35rem 0.4rem 2rem;
+    text-align: center;
+    vertical-align: middle;
+}
+.soc-email {
+    background-image: url('images/soc-email.svg');
+}
+.soc-linkedin {
+    background-image: url('images/soc-linkedin.svg');
+}
+.soc-mastodon {
+    background-image: url('images/soc-mastodon.svg');
+}
+.soc-x {
+    background-image: url('images/soc-x.svg');
+}
+.soc-wrap {
+    margin: 0 -1rem 0;
+    text-align: center;
 }
 .width-limit {
     margin-left: auto;
@@ -427,7 +462,7 @@ details[open] > *:last-child {
 }
 @media (orientation: portrait) {
     .map-wrap {
-        padding-top: 100%; /* 1:1 aspect ratio for phones. */
+        padding-bottom: 100%; /* 1:1 aspect ratio for phones. */
     }
 }
 @media all and (max-width: 1280px) {
@@ -465,7 +500,7 @@ details[open] > *:last-child {
     }
     .petition-wrap-inner {
         /* Account for change of iframe's height due to its re-flow of its contents. */
-        padding-top: 177%;
+        padding-bottom: 177%;
     }
     .site-logo {
         max-width: 272px;
@@ -477,7 +512,7 @@ details[open] > *:last-child {
     }
     .petition-wrap-inner {
         /* Account for change of iframe's height due to its re-flow of its contents. */
-        padding-top: 205%;
+        padding-bottom: 205%;
     }
     .site-logo {
         max-width: 256px;
