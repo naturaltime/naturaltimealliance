@@ -413,6 +413,12 @@ details[open] > *:last-child {
 .soc-email {
     background-image: url('images/soc-email.svg');
 }
+.soc-facebook {
+    background-image: url('images/soc-facebook.svg');
+}
+.soc-instagram {
+    background-image: url('images/soc-instagram.svg');
+}
 .soc-linkedin {
     background-image: url('images/soc-linkedin.svg');
 }
@@ -423,7 +429,7 @@ details[open] > *:last-child {
     background-image: url('images/soc-x.svg');
 }
 .soc-wrap {
-    margin: 0 -1rem 0;
+    margin: auto;
     text-align: center;
 }
 .width-limit {
