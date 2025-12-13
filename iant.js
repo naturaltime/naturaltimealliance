@@ -118,7 +118,7 @@
                 domain: 'napialvas.hu',
             }));
             const na = L.marker([59.3293, 18.0686], { icon: pin }).addTo(map).bindPopup(makeMapPopupString({
-                flag: '🇳🇴',
+                flag: '🇸🇪',
                 imgName: 'group-na.png',
                 memberName: 'NormalTid AllTid',
                 domain: 'normaltidalltid.se',

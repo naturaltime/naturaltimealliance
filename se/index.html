@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="se">
+    <head>
+        <meta charset="UTF-8">
+        <title>Internationella Alliansen för Naturlig Tid</title>
+
+        <!-- Base appearance. -->
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <!-- Favicons. -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00529b">
+        <meta name="msapplication-TileColor" content="#00529b">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- SEO & share. -->
+        <meta name="robots" content="index, follow">
+        <meta name="description" content="Vi arbetar för att hela världen permanent ska införa naturlig tid, baserad på geografiskt lämpliga och solbaserade tidszoner. Historien och en allt större mängd vetenskapliga bevis fastställer att detta är helt avgörande för hälsa, säkerhet, utbildning, arbete, ekonomi, miljö och mänskliga rättigheter.">
+        <meta name="keywords" content="Activism, Advocacy, Australasia, Clock Change, Ditch the Switch, DST, European Union, Global, Lock the Lock, Natural Time, North America, Permanent Daylight Saving Time, Permanent Standard Time, Solar Time, Summer Time, Time Change, Time Zone, Universal Time, Winter Time, Year-Round Daylight Saving Time, Year-Round Standard Time, Zulu Time">
+        <link rel="canonical" href="https://naturaltimealliance.org/se/">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Internationella Alliansen för Naturlig Tid">
+        <meta name="twitter:description" content="Vi arbetar för att hela världen permanent ska införa naturlig tid, baserad på geografiskt lämpliga och solbaserade tidszoner. Historien och en allt större mängd vetenskapliga bevis fastställer att detta är helt avgörande för hälsa, säkerhet, utbildning, arbete, ekonomi, miljö och mänskliga rättigheter.">
+        <meta name="twitter:site" content="@ForNaturalTime">
+        <meta name="twitter:image" content="https://naturaltimealliance.org/images/share.jpg">
+        <meta name="twitter:image:alt" content="logo">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Internationella Alliansen för Naturlig Tid">
+        <meta property="og:description" content="Vi arbetar för att hela världen permanent ska införa naturlig tid, baserad på geografiskt lämpliga och solbaserade tidszoner. Historien och en allt större mängd vetenskapliga bevis fastställer att detta är helt avgörande för hälsa, säkerhet, utbildning, arbete, ekonomi, miljö och mänskliga rättigheter.">
+        <meta property="og:url" content="https://naturaltimealliance.org/se/">
+        <meta property="og:image" content="https://naturaltimealliance.org/images/share.jpg">
+        <meta property="og:image:alt" content="logo">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
+        <!-- Styles & scripts. -->
+        <link href="../reset.css" rel="stylesheet" type="text/css">
+        <link href="../iant.css" rel="stylesheet" type="text/css">
+        <script src="../iant.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="">
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+
+    </head>
+    <body>
+        <header>
+            <select class="language-gui" id="language-gui" translate="no">
+                <option value="de">DE 🇩🇪</option>
+                <option value="en">EN 🇬🇧</option>
+                <option value="es">ES 🇪🇸</option>
+                <option value="fr">FR 🇫🇷</option>
+                <option value="nl">NL 🇳🇱</option>
+                <option value="pt">PT 🇵🇹</option>
+                <option value="ru">RU 🇷🇺</option>
+                <option value="se" selected>SE 🇸🇪</option>
+            </select>
+        </header>
+
+        <main>
+            <div class="width-limit">
+
+                <section>
+                    <h1 style="font-size: 0; margin-bottom: 0.25rem;"><img alt="Internationella Alliansen för Naturlig Tid" class="site-logo" src="../images/iant-se.svg"></h1>
+                    <p style="margin-bottom: 0.75rem;">Vi arbetar för att hela världen permanent ska införa naturlig tid, baserad på geografiskt lämpliga och solbaserade tidszoner. Historien och en allt större mängd vetenskapliga bevis fastställer att detta är helt avgörande för hälsa, säkerhet, utbildning, arbete, ekonomi, miljö och mänskliga rättigheter.</p>
+                    <a class="button external" href="https://action.wemove.eu/sign/2024-10-are-you-sick-and-tired-of-changing-the-clock-twice-a-year-EN" style="max-width: 14em;" target="_blank" title="Besök">Skriv på Uppropet till Europas Ledare!</a>
+                </section>
+
+                <section>
+                    <h2 id="about">Om Oss</h2>
+                    <p>Vi är en internationell sammanslutning av förespråkare av hälsa och tidsanvändning samt ideella organisationer, med stöd från kronobiologer, neuroforskare och ekonomer, och vi arbetar alla för att öka medvetenheten hos allmänhet och politiker om behovet av att permanent återställa de naturliga tidszoner som är geografiskt lämpliga för varje land.</p>
+                    <details>
+                        <summary title="Visa Mer/Mindre">+</summary>
+                        <p>Vi strävar efter att förse medborgare och lagstiftare med fullständig, tillförlitlig information som är relevant och avgörande för inställning av tid för civila aktiviteter. Vi uppmanar Europeiska unionen, dess nationella myndigheter, de federala, statliga och provinsiella regeringarna i USA och Kanada, samt regeringarna i alla berörda nationer att erkänna de tillgängliga vetenskapliga bevisen som tillhandahålls av världens ledande forskare inom kronobiologi och miljövetenskap, och att återställa ländernas geografiskt lämpliga tidszoner så snart som möjligt.</p>
+                        <p>Låt varje land ha sin egen naturliga tid!</p>
+                    </details>
+                </section>
+
+                <section>
+                    <h2 id="why">VARFÖR NATURLIG TID?</h2>
+                    <p>En överväldigande och allt större mängd bevis från vetenskapliga studier och experiment i fält visar att det både är akut och kroniskt skadligt att leva i tidszoner som inte stämmer överens med våra inre biologiska klockor.</p>
+                    <details>
+                        <summary title="Visa Mer/Mindre">+</summary>
+                        <p>När vår inre biologiska klocka inte överensstämmer med den vanliga klockan leder det till en markant ökning av sömnstörningar, depressioner, metabola störningar, fetma, hjärt-kärlsjukdomar, cancer och till och med för tidig dödlighet. Det ger störningar i trafiken med ökade antal olyckor som följd och minskad prestationsförmåga i arbetet. Det försämrar utbildning och inlärningsförmåga. Det förskjuter tiden för mänskliga aktiviteter, vilket ökar bränsleförbrukningen och energislöseriet. Det belastar sjukvård, ekonomi och miljö i onödan.</p>
+                        <p>Vid de årliga tidsomställningarna i mars och oktober åsamkas samhället akut skada på våra biologiska klockor. Samhället påtvingas också kroniskt felaktiga inställningar av den cirkadiska rytmen när longitudinellt olämpliga tidszoner används. Permanent återställning av den tidszon som är närmast ett lands/en stats naturliga tid, definierad av solen, löser båda problemen enkelt och lätt.</p>
+                        <p>Det är en mänsklig rättighet att leva under förhållanden som möjliggör högsta möjliga fysiska och psykiska hälsa. Permanenta och geografiskt lämpliga naturliga tidszoner kommer att förbättra sömnens kvantitet och kvalitet. Detta gynnar mental och kroppslig hälsa, livslängd och ungdomars utveckling. Det förbättrar säkerhetstänk, mental närvaro och riskbedömning på vägarna, i skolan och på jobbet. I stora länder som spänner över flera tidszoner har naturlig tid visat sig ha en positiv effekt på den inre marknaden. Detta minskar kostnader, föroreningar och klimatförändringar. Den naturliga tiden ger stabila och hälsosamma fördelar dag som natt under alla årstider. Det är en viktig aspekt av ett rättvist och hållbart samhälle.</p>
+                    </details>
+                </section>
+
+                <section>
+                    <h2 id="statements">Vetenskapliga Uttalanden</h2>
+                    <section>
+                        <h3>Läs Uttalanden från Kronobiologiska&nbsp;Sällskap</h3>
+                        <details>
+                            <summary title="Visa Mer/Mindre">+</summary>
+                            <ul>
+                                <li><a class="external" href="https://bioclockconsortium.org/en/news/bioclock-consortium-presents-position-statement-end-the-clock-changes/" target="_blank" title="Besök">Dutch BioClock Consortium</a></li>
+                                <li><a class="external" href="https://www.chronobiocanada.com/official-statements" target="_blank" title="Besök">Canadian Society for Chronobiology&nbsp;(CSC)</a></li>
+                                <li><a class="external" href="https://www.irishtimes.com/opinion/daylight-saving-time-harmed-by-hands-of-the-clock-1.4064179" target="_blank" title="Besök">Irish Curtis Clock Lab (CCL)</a></li>
+                                <li><a class="external" href="https://esrs.eu/wp-content/uploads/2019/03/To_the_EU_Commission_on_DST.pdf" target="_blank" title="Besök">European Biological Rhythms&nbsp;Society&nbsp;(EBRS)</a></li>
+                                <li><a class="external" href="https://srbr.org/advocacy/daylight-saving-time-presskit/" target="_blank" title="Besök">International Society for Research on Biological&nbsp;Rhythms&nbsp;(SRBR)</a></li>
+                            </ul>
+                        </details>
+                    </section>
+                    <section>
+                        <h3>Läs Uttalanden från Sömnföreningar</h3>
+                        <details>
+                            <summary title="Visa Mer/Mindre">+</summary>
+                            <ul>
+                                <li><a class="external" href="https://aasm.org/new-position-statement-supports-permanent-standard-time/" target="_blank" title="Besök">American Academy of Sleep&nbsp;Medicine&nbsp;(AASM)</a></li>
+                                <li><a class="external" href="https://www.thensf.org/wp-content/uploads/2024/03/NSF-Position-on-Permanent-Standard-Time_Final_.pdf" target="_blank" title="Besök">American National Sleep&nbsp;Foundation&nbsp;(NSF)</a></li>
+                                <li><a class="external" href="https://sleepresearchsociety.org/sleep-research-society-position-statement-supports-adoption-permanent-standard-time/" target="_blank" title="Besök">American Sleep Research&nbsp;Society&nbsp;(SRS)</a></li>
+                                <li><a class="external" href="https://onlinelibrary.wiley.com/doi/10.1111/jsr.14352" target="_blank" title="Besök">British Sleep Society (BSS)</a></li>
+                                <li><a class="external" href="https://www.researchsleep.ca/time-change" target="_blank" title="Besök">Canadian Sleep Research&nbsp;Consortium</a></li>
+                                <li><a class="external" href="https://css-scs.ca/society-news/position-statement-of-the-canadian-sleep-society-on-the-practice-of-daylight-saving-time-dst/" target="_blank" title="Besök">Canadian Sleep Society (CSS)</a></li>
+                                <li><a class="external" href="https://www.nswo.nl/zomertijd-afschaffen/" target="_blank" title="Besök">Dutch Association of Sleep–Wake Research (NSWO) & Netherlands Sleep Science&nbsp;Association&nbsp;(SVNL)</a></li>
+                                <li><a class="external" href="https://esrs.eu/wp-content/uploads/2019/03/To_the_EU_Commission_on_DST.pdf" target="_blank" title="Besök">European Sleep Research&nbsp;Society&nbsp;(ESRS)</a></li>
+                                <li><a class="external" href="https://apsono.com/pt/24-noticias/noticias-do-sono/459-associacao-portuguesa-de-sono-defende-abolicao-da-mudanca-horaria-e-permanencia-na-hora-de-inverno" target="_blank" title="Besök">Portuguese Sleep Association&nbsp;(APS)</a></li>
+                                <li><a class="external" href="https://ses.org.es/wp-content/uploads/2018/10/ses-posicionamiento-cambio-de-hora.pdf" target="_blank" title="Besök">Spanish Sleep Society (SES)</a></li>
+                            </ul>
+                        </details>
+                    </section>
+                    <section>
+                        <h3>Läs Uttalanden från Andra Organisationer</h3>
+                        <details>
+                            <summary title="Visa Mer/Mindre">+</summary>
+                            <ul>
+                                <li><a class="external" href="https://www.ama-assn.org/press-center/press-releases/ama-calls-permanent-standard-time" target="_blank" title="Besök">American Medical Association</a></li>
+                                <li><a class="external" href="https://www.beteretijden.org/alliantie/" target="_blank" title="Besök">Benelux Alliance for Healthy&nbsp;Times</a></li>
+                                <li><a class="external" href="https://www.rivm.nl/en/news/standard-time-more-beneficial-for-public-health-than-summer-time" target="_blank" title="Besök">Dutch National Institute for Public Health &&nbsp;the&nbsp;Environment</a></li>
+                                <li><a class="external" href="https://www.beteretijden.org/healthtime/" target="_blank" title="Besök">Dutch Platform Betere Tijden</a></li>
+                                <li><a class="external" href="https://zeitpolitik.org/wp-content/uploads/2022/03/future_of_DST.pdf" target="_blank" title="Besök">German Society for Time Policy</a></li>
+                            </ul>
+                        </details>
+                    </section>
+                </section>
+
+                <section>
+                    <h2 id="members">Medlemmar</h2>
+                    <details open>
+                        <summary title="Visa Mer/Mindre">+</summary>
+                        <div class="grid">
+                            <div>
+                                <figure>
+                                    <h3>Australia&nbsp;🇦🇺 & New&nbsp;Zealand&nbsp;🇳🇿</h3>
+                                    <img alt="logotyp" src="../images/group-nds.png">
+                                    <figcaption><a class="external" href="https://www.facebook.com/profile.php?id=100064450731610" target="_blank" title="Besök">No Daylight Saving Australia & New&nbsp;Zealand</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Belgium&nbsp;🇧🇪</h3>
+                                    <img alt="logotyp" src="../images/group-vtz.png">
+                                    <figcaption><a class="external" href="https://www.zomeruur.com/" target="_blank" title="Besök">Vereniging Tegen het&nbsp;Zomeruur</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Denmark&nbsp;🇩🇰</h3>
+                                    <img alt="logotyp" src="../images/group-lms.png">
+                                    <figcaption><a class="external" href="https://www.ikkesommertid.dk" target="_blank" title="Besök">Landsforeningen Mod&nbsp;Sommertid</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>France&nbsp;🇫🇷</h3>
+                                    <img alt="logotyp" src="../images/group-lm.png">
+                                    <figcaption><a class="external" href="http://lameridienne.over-blog.org/" target="_blank" title="Besök">La Méridienne</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Germany&nbsp;🇩🇪</h3>
+                                    <img alt="logotyp" src="../images/group-inl.png">
+                                    <figcaption><a class="external" href="https://www.normalzeit-leben.de/" target="_blank" title="Besök">In Normalzeit Leben</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Germany&nbsp;🇩🇪</h3>
+                                    <img alt="logotyp" src="../images/group-z.png">
+                                    <figcaption><a class="external" href="https://www.mathe-physik-technik.de/links/zeitenwende/" target="_blank" title="Besök">Zeitenwende</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Kazakhstan&nbsp;🇰🇿</h3>
+                                    <img alt="logotyp" src="../images/group-ntk.png">
+                                    <figcaption><a class="external" href="https://www.facebook.com/groups/949363842090236" target="_blank" title="Besök">Казахстану Природное Время!</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Netherlands&nbsp;🇳🇱</h3>
+                                    <img alt="logotyp" src="../images/group-pbt.png">
+                                    <figcaption><a class="external" href="https://www.beteretijden.org/" target="_blank" title="Besök">Platform Betere Tijden</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Netherlands&nbsp;🇳🇱</h3>
+                                    <img alt="logotyp" src="../images/group-s.png">
+                                    <figcaption><a class="external" href="http://standaardtijd.nl/" target="_blank" title="Besök">Standaardtijd</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Norway&nbsp;🇳🇴</h3>
+                                    <img alt="logotyp" src="../images/group-nnht.png">
+                                    <figcaption><a class="external" href="https://www.facebook.com/groups/1657099824847086" target="_blank" title="Besök">Normaltid i Norge Hele&nbsp;Tiden</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Russia&nbsp;🇷🇺</h3>
+                                    <img alt="logotyp" src="../images/group-vrtm.png">
+                                    <figcaption><a class="external" href="https://vk.com/povolgeutc3/" target="_blank" title="Besök">Поволжье: Время – Московское! UTC+3</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Russia&nbsp;🇷🇺</h3>
+                                    <img alt="logotyp" src="../images/group-sht.png">
+                                    <figcaption><a class="external" href="https://www.facebook.com/groups/zazdorovoevremya/" target="_blank" title="Besök">Саратов за Здоровое&nbsp;Время!</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Spain&nbsp;🇪🇸</h3>
+                                    <img alt="logotyp" src="../images/group-btui.png">
+                                    <figcaption><a class="external" href="https://www.timeuse.barcelona/" target="_blank" title="Besök">Time Use Initiative</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Sweden&nbsp;🇸🇪</h3>
+                                    <img alt="logotyp" src="../images/group-na.png">
+                                    <figcaption><a class="external" href="https://www.normaltidalltid.se/" target="_blank" title="Besök">NormalTid AllTid</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>United Kingdom&nbsp;🇬🇧</h3>
+                                    <img alt="logotyp" src="../images/group-st.png">
+                                    <figcaption><a class="external" href="https://www.facebook.com/solartimeofficial/" target="_blank" title="Besök">Solar Time</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>United States&nbsp;🇺🇸 &&nbsp;Canada&nbsp;🇨🇦</h3>
+                                    <img alt="logotyp" src="../images/group-sst.png">
+                                    <figcaption><a class="external" href="https://savestandardtime.com/" target="_blank" title="Besök">Save Standard Time</a></figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </details>
+                </section>
+
+                <section>
+                    <h2 id="endorsers">Förespråkare</h2>
+                    <details>
+                        <summary title="Visa Mer/Mindre">+</summary>
+                        <div class="grid">
+                            <div>
+                                <figure>
+                                    <h3>Belgium&nbsp;🇧🇪</h3>
+                                    <img alt="logotyp" src="../images/group-vv.png">
+                                    <figcaption><a class="external" href="https://www.vogelbescherming.be/" target="_blank" title="Besök">Vogelbescherming Vlaanderen</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Canada&nbsp;🇨🇦</h3>
+                                    <img alt="logotyp" src="../images/group-csrc.png">
+                                    <figcaption><a class="external" href="https://www.researchsleep.ca/" target="_blank" title="Besök">Canadian Sleep Research Consortium</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Germany&nbsp;🇩🇪</h3>
+                                    <img alt="logotyp" src="../images/group-bc.png">
+                                    <figcaption><a class="external" href="https://www.bodyclock.health/" target="_blank" title="Besök">BodyClock</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Germany&nbsp;🇩🇪</h3>
+                                    <img alt="logotyp" src="../images/group-dgz.png">
+                                    <figcaption><a class="external" href="http://www.zeitpolitik.de/" target="_blank" title="Besök">Deutsche Gesellschaft für Zeitpolitik</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Germany&nbsp;🇩🇪</h3>
+                                    <img alt="logotyp" src="../images/group-eua.png">
+                                    <figcaption><a class="external" href="https://eu-aschaffenburg.de/" target="_blank" title="Besök">Europa-Union Aschaffenburg</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Germany&nbsp;🇩🇪</h3>
+                                    <img alt="logotyp" src="../images/group-zg.png">
+                                    <figcaption><a class="external" href="http://zeit-gestaltung.de/" target="_blank" title="Besök">Zeitgestaltung</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Germany&nbsp;🇩🇪 &&nbsp;Portugal&nbsp;🇵🇹</h3>
+                                    <img alt="logotyp" src="../images/group-bt.png">
+                                    <figcaption><a class="external" href="https://gobettertimes.org/" target="_blank" title="Besök">BetterTimes</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Hungary&nbsp;🇭🇺</h3>
+                                    <img alt="logotyp" src="../images/group-mas.png">
+                                    <figcaption><a class="external" href="https://www.napialvas.hu/" target="_blank" title="Besök">Magyar Alvás Szövetség</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>International&nbsp;🌐</h3>
+                                    <img alt="logotyp" src="../images/group-glg.png">
+                                    <figcaption><a class="external" href="https://www.goodlightgroup.org/" target="_blank" title="Besök">Good Light Group</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Netherlands&nbsp;🇳🇱</h3>
+                                    <img alt="logotyp" src="../images/group-bcc.png">
+                                    <figcaption><a class="external" href="https://bioclockconsortium.org/" target="_blank" title="Besök">BioClock Consortium</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Spain&nbsp;🇪🇸</h3>
+                                    <img alt="logotyp" src="../images/group-arhoe.png">
+                                    <figcaption><a class="external" href="https://horariosenespana.com/" target="_blank" title="Besök">ARHOE</a></figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>United States&nbsp;🇺🇸</h3>
+                                    <img alt="logotyp" src="../images/group-sc.png">
+                                    <figcaption><a class="external" href="https://play.google.com/store/apps/details?id=com.jamescr05.solar_clock" target="_blank" title="Besök">Solar Clock</a></figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </details>
+                </section>
+
+                <section>
+                    <h2 id="join">Gå Med i Rörelsen för Hälsosam, Rättvis och Naturlig Tid!</h2>
+                    <details>
+                        <summary title="Visa Mer/Mindre">+</summary>
+                        <p>Besök gärna våra medlemsgrupper och stöd deras ansträngningar. Skriv till våra nationella kontakter <a href="#contacts" id="link-to-contacts">nedan</a> för att engagera dig mer i ditt land. Skicka <a href="mailto:&#105;&#110;&#102;&#111;&#064;&#110;&#097;&#116;&#117;&#114;&#097;&#108;&#116;&#105;&#109;&#101;&#097;&#108;&#108;&#105;&#097;&#110;&#099;&#101;&#046;&#111;&#114;&#103;" title="Kontakta">e-post</a> till vår allians om din grupp vill bli medlem eller sponsor. Det är helt kostnadsfritt.</p>
+                    </details>
+                </section>
+
+                <section>
+                    <h2>Världskarta</h2>
+                    <details open>
+                        <summary title="Visa Mer/Mindre">+</summary>
+                        <div>
+                            <div class="map-wrap" id="map-wrap">
+                                <!-- If JavaScript is disabled by user (rare), explain why box is empty. -->
+                                <noscript><p>Vänligen aktivera JavaScript i din webbläsare för att visa kartan nedan.</p></noscript>
+                                <div class="map" id="map"></div>
+                            </div>
+                        </div>
+                    </details>
+                </section>
+
+                <section>
+                    <h2 id="contacts">Nationella Kontakter</h2>
+                    <details id="contacts-details">
+                        <summary title="Visa Mer/Mindre">+</summary>
+                        <div class="grid grid-7">
+                            <div>
+                                <figure>
+                                    <h3>Australia&nbsp;🇦🇺 & New&nbsp;Zealand&nbsp;🇳🇿</h3>
+                                    <img alt="person" class="person" src="../images/person-ben.jpg">
+                                    <figcaption>
+                                        <h4>Ben Musgrave</h4>
+                                        <h5>No Daylight Saving Australia & New&nbsp;Zealand</h5>
+                                        <div><a class="external" href="https://www.facebook.com/profile.php?id=100068687663914" title="Besök" target="_blank">Facebook</a></div>
+                                        <div><a href="mailto:&#098;&#101;&#110;&#046;&#109;&#117;&#115;&#103;&#114;&#097;&#118;&#101;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" title="Kontakta">Email</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Belgium&nbsp;🇧🇪</h3>
+                                    <img alt="person" class="person" src="../images/person-ann.jpg">
+                                    <figcaption>
+                                        <h4>Ann Ceusters</h4>
+                                        <h5>Vereniging Tegen het&nbsp;Zomeruur</h5>
+                                        <div><a class="external" href="https://www.linkedin.com/in/ann-ceusters-002aa060/" title="Besök" target="_blank">LinkedIn</a></div>
+                                        <div><a href="mailto:&#105;&#110;&#102;&#111;&#064;&#122;&#111;&#109;&#101;&#114;&#117;&#117;&#114;&#046;&#099;&#111;&#109;" title="Kontakta">Email</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Denmark&nbsp;🇩🇰</h3>
+                                    <img alt="person" class="person" src="../images/person-birgitte.jpg">
+                                    <figcaption>
+                                        <h4>Birgitte Gade</h4>
+                                        <h5>Landsforeningen Mod&nbsp;Sommertid</h5>
+                                        <div><a class="external" href="https://www.facebook.com/birgitte.gade.39" title="Besök" target="_blank">Facebook</a></div>
+                                        <div><a href="mailto:&#098;&#105;&#114;&#103;&#105;&#116;&#116;&#101;&#056;&#048;&#064;&#119;&#101;&#098;&#115;&#112;&#101;&#101;&#100;&#046;&#100;&#107;" title="Kontakta">Email</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>France&nbsp;🇫🇷</h3>
+                                    <img alt="person" class="person" src="../images/person-maryvonne.jpg">
+                                    <figcaption>
+                                        <h4>Maryvonne Bauer</h4>
+                                        <h5>La Méridienne</h5>
+                                        <div><a class="external" href="https://www.linkedin.com/in/maryvonne-bauer-54519642/" title="Besök" target="_blank">LinkedIn</a></div>
+                                        <div><a href="mailto:&#108;&#097;&#109;&#101;&#114;&#105;&#100;&#105;&#101;&#110;&#110;&#101;&#095;&#064;&#104;&#111;&#116;&#109;&#097;&#105;&#108;&#046;&#102;&#114;" title="Kontakta">Email</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Germany&nbsp;🇩🇪</h3>
+                                    <img alt="person" class="person" src="../images/person-andreas.jpg">
+                                    <figcaption>
+                                        <h4>Andreas Rueff Dr&#x2011;Ing</h4>
+                                        <h5>Zeitenwende</h5>
+                                        <div><a class="external" href="https://www.linkedin.com/in/andreas-rueff-12b565169/" title="Besök" target="_blank">LinkedIn</a></div>
+                                        <div><a href="mailto:&#114;&#117;&#101;&#102;&#102;&#064;&#109;&#097;&#116;&#104;&#101;&#045;&#112;&#104;&#121;&#115;&#105;&#107;&#045;&#116;&#101;&#099;&#104;&#110;&#105;&#107;&#046;&#100;&#101;" title="Kontakta">Email</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Kazakhstan&nbsp;🇰🇿</h3>
+                                    <img alt="person" class="person" src="../images/person-bolat.jpg">
+                                    <figcaption>
+                                        <h4>Bolat Nurkhozhaev</h4>
+                                        <h5>Казахстану природное время!</h5>
+                                        <div><a class="external" href="https://www.facebook.com/profile.php?id=100009331509340" title="Besök" target="_blank">Facebook</a></div>
+                                        <div><a href="mailto:&#110;&#046;&#098;&#111;&#108;&#097;&#116;&#064;&#109;&#097;&#105;&#108;&#046;&#114;&#117;" title="Kontakta">Email</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Netherlands&nbsp;🇳🇱</h3>
+                                    <img alt="person" class="person" src="../images/person-ticia.jpg">
+                                    <figcaption>
+                                        <h4>Ticia Luengo Hendriks</h4>
+                                        <h5>Platform Betere Tijden</h5>
+                                        <div><a class="external" href="https://www.linkedin.com/in/ticia-luengo-hendriks/" title="Besök" target="_blank">LinkedIn</a></div>
+                                        <div><a href="mailto:&#105;&#110;&#102;&#111;&#064;&#098;&#101;&#116;&#101;&#114;&#101;&#116;&#105;&#106;&#100;&#101;&#110;&#046;&#111;&#114;&#103;" title="Kontakta">Email</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Norway&nbsp;🇳🇴</h3>
+                                    <img alt="person" class="person" src="../images/person-trond.jpg">
+                                    <figcaption>
+                                        <h4>Trond Martin Langeli</h4>
+                                        <h5>Normaltid i Norge Hele&nbsp;Tiden</h5>
+                                        <div><a class="external" href="https://www.linkedin.com/in/langeli/" title="Besök" target="_blank">LinkedIn</a></div>
+                                        <div><a href="mailto:&#101;&#112;&#064;&#115;&#097;&#112;&#105;&#097;&#115;&#046;&#110;&#111;" title="Kontakta">Email</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Portugal&nbsp;🇵🇹</h3>
+                                    <img alt="person" class="person" src="../images/person-joao.jpg">
+                                    <figcaption>
+                                        <h4>João Lipinsky Nunes PhD</h4>
+                                        <h5>BetterTimes</h5>
+                                        <div><a class="external" href="https://www.linkedin.com/in/jmenunes/" title="Besök" target="_blank">LinkedIn</a></div>
+                                        <div><a href="mailto:&#105;&#110;&#102;&#111;&#064;&#103;&#111;&#098;&#101;&#116;&#116;&#101;&#114;&#116;&#105;&#109;&#101;&#115;&#046;&#099;&#111;&#109;" title="Kontakta">Email</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Russia&nbsp;🇷🇺</h3>
+                                    <img alt="person" class="person" src="../images/person-vyacheslav.jpg">
+                                    <figcaption>
+                                        <h4>Vyacheslav Sorokin</h4>
+                                        <h5>Поволжье: Время – Московское! UTC+3 & Саратов&nbsp;за Здоровое&nbsp;Время!</h5>
+                                        <div><a class="external" href="https://www.facebook.com/profile.php?id=100000914415827" title="Besök" target="_blank">Facebook</a></div>
+                                        <div><a href="mailto:&#115;&#115;&#116;&#105;&#109;&#101;&#055;&#055;&#055;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" title="Kontakta">Email</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Spain&nbsp;🇪🇸</h3>
+                                    <img alt="person" class="person" src="../images/person-ariadna.jpg">
+                                    <figcaption>
+                                        <h4>Ariadna Güell Sans</h4>
+                                        <h5>Time Use Initiative</h5>
+                                        <div><a class="external" href="https://www.linkedin.com/in/ariadnaguell/" title="Besök" target="_blank">LinkedIn</a></div>
+                                        <div><a href="mailto:&#097;&#114;&#105;&#097;&#100;&#110;&#097;&#103;&#117;&#101;&#108;&#108;&#064;&#116;&#105;&#109;&#101;&#117;&#115;&#101;&#046;&#098;&#097;&#114;&#099;&#101;&#108;&#111;&#110;&#097;" title="Kontakta">Email</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>Sweden&nbsp;🇸🇪</h3>
+                                    <img alt="person" class="person" src="../images/person-susanne.jpg">
+                                    <figcaption>
+                                        <h4>Susanne Gudmunds</h4>
+                                        <h5>NormalTid AllTid</h5>
+                                        <div><a class="external" href="https://www.facebook.com/susanne.gudmunds" title="Besök" target="_blank">Facebook</a></div>
+                                        <div><a href="mailto:&#115;&#117;&#115;&#097;&#110;&#110;&#101;&#054;&#053;&#103;&#117;&#100;&#064;&#104;&#111;&#116;&#109;&#097;&#105;&#108;&#046;&#115;&#101;" title="Kontakta">Email</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>United Kingdom&nbsp;🇬🇧</h3>
+                                    <img alt="person" class="person" src="../images/person-stefano.jpg">
+                                    <figcaption>
+                                        <h4>Stefano Pavone</h4>
+                                        <h5>Solar Time</h5>
+                                        <div><a class="external" href="https://www.linkedin.com/in/stefano-pavone-8aa058298/" title="Besök" target="_blank">LinkedIn</a></div>
+                                        <div><a href="mailto:&#115;&#116;&#101;&#102;&#097;&#110;&#111;&#112;&#097;&#118;&#111;&#110;&#101;&#064;&#108;&#105;&#118;&#101;&#046;&#099;&#111;&#046;&#117;&#107;" title="Kontakta">Email</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div>
+                                <figure>
+                                    <h3>United States&nbsp;🇺🇸 &&nbsp;Canada&nbsp;🇨🇦</h3>
+                                    <img alt="person" class="person" src="../images/person-jay.jpg">
+                                    <figcaption>
+                                        <h4>Jay Pea</h4>
+                                        <h5>Save Standard Time</h5>
+                                        <div><a class="external" href="https://www.linkedin.com/in/savestandard/" title="Besök" target="_blank">LinkedIn</a></div>
+                                        <div><a href="mailto:&#105;&#110;&#102;&#111;&#064;&#115;&#097;&#118;&#101;&#115;&#116;&#097;&#110;&#100;&#097;&#114;&#100;&#116;&#105;&#109;&#101;&#046;&#099;&#111;&#109;" title="Kontakta">Email</a></div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </details>
+                </section>
+            </div>
+
+            <section>
+                <h2 class="width-limit">Skriv på Uppropet till de Europeiska&nbsp;Ledarna!</h2>
+                <details open>
+                    <summary title="Visa Mer/Mindre">+</summary>
+                    <div class="petition-wrap-outer">
+                        <div class="petition-wrap-inner">
+                            <iframe src="https://action.wemove.eu/sign/2024-10-are-you-sick-and-tired-of-changing-the-clock-twice-a-year-EN?embed=form"></iframe>
+                        </div>
+                    </div>
+                </details>
+            </section>
+        </main>
+
+        <footer>
+            <div class="width-limit">
+                <h2>International Alliance for&nbsp;Natural&nbsp;Time</h2>
+                <address>
+                    <a class="soc soc-email" href="mailto:&#105;&#110;&#102;&#111;&#064;&#110;&#097;&#116;&#117;&#114;&#097;&#108;&#116;&#105;&#109;&#101;&#097;&#108;&#108;&#105;&#097;&#110;&#099;&#101;&#046;&#111;&#114;&#103;" title="Kontakta">&#105;&#110;&#102;&#111;&#064;&#110;&#097;&#116;&#117;&#114;&#097;&#108;&#116;&#105;&#109;&#101;&#097;&#108;&#108;&#105;&#097;&#110;&#099;&#101;&#046;&#111;&#114;&#103;</a>
+                    <div class="soc-wrap">
+                        <a class="soc soc-facebook" href="https://www.facebook.com/alliancefornaturaltime" rel="me" target="_blank" title="Besök">Facebook</a>
+                        <a class="soc soc-instagram" href="https://www.instagram.com/fornaturaltime/" rel="me" target="_blank" title="Besök">Instagram</a>
+                        <a class="soc soc-linkedin" href="https://www.linkedin.com/company/international-alliance-for-natural-time/" rel="me" target="_blank" title="Besök">LinkedIn</a>
+                        <a class="soc soc-mastodon" href="https://mstdn.social/@NaturalTimeAlliance" rel="me" target="_blank" title="Besök">Mastodon</a>
+                        <a class="soc soc-x" href="https://x.com/ForNaturalTime" rel="me" target="_blank" title="Besök">X</a>
+                    </div>
+                </address>
+                <p class="copyright"><small>©2020<img width="0" height="0" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" loading="lazy">–2025</small></p>
+                <p class="gdpr"><small>This website uses no cookies and&nbsp;stores&nbsp;no&nbsp;personal&nbsp;data.</small></p>
+            </div>
+        </footer>
+    </body>
+</html>
